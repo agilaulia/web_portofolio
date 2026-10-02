@@ -20,6 +20,7 @@
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
           },
+          
           colors: {
             heroBg: '#e6ebf2',
             brandBlue: '#3866f2',
@@ -91,36 +92,26 @@
   <div class="bg-heroBg relative overflow-hidden pb-16 lg:pb-24 pt-4 border-b border-slate-200/60">
 
     <!-- ==================== 1. NAVBAR ==================== -->
-    <nav class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-3 flex items-center justify-between relative z-30">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-3.5 flex flex-col md:flex-row items-center justify-between relative z-30 gap-3 md:gap-0">
       
-      <!-- Brand / Logo -->
-      <a href="#hero" class="flex items-center gap-2.5 group">
-        <div class="w-9 h-9 rounded-xl bg-brandBlue text-white flex items-center justify-center font-bold text-base shadow-sm shadow-brandBlue/30 group-hover:scale-105 transition-transform duration-300">
-          A
-        </div>
-        <span class="font-bold text-xl text-slate-900 tracking-tight">
-          Agil<span class="text-brandBlue">.</span>
-        </span>
-      </a>
-
-      <!-- Menu Links (Desktop) -->
-      <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-        <a href="#about" class="hover:text-slate-900 transition-colors duration-200">About</a>
-        <a href="#skills" class="hover:text-slate-900 transition-colors duration-200">Skills</a>
-        <a href="#projects" class="hover:text-slate-900 transition-colors duration-200">Projects</a>
-        <a href="#contact" class="hover:text-slate-900 transition-colors duration-200">Contact</a>
+      <!-- Brand / Logo (Left) -->
+      <div class="w-full md:w-auto flex items-center justify-start">
+        <a href="#hero" class="flex items-center gap-2 group">
+          <div class="w-9 h-9 rounded-xl bg-brandBlue text-white flex items-center justify-center font-bold text-base shadow-sm shadow-brandBlue/30 group-hover:scale-105 transition-transform duration-300">
+            A
+          </div>
+          <span class="font-bold text-lg sm:text-xl text-slate-900 tracking-tight whitespace-nowrap">
+            Agil Aulia Rachman M<span class="text-brandBlue">.</span>
+          </span>
+        </a>
       </div>
 
-      <!-- CTA Button (Pill with Arrow Circle) -->
-      <div class="flex items-center">
-        <a href="#contact" class="group flex items-center bg-slate-900 hover:bg-slate-800 text-white pl-5 pr-1.5 py-1.5 rounded-full transition-all duration-300 shadow-sm hover:scale-105">
-          <span class="text-xs sm:text-sm font-medium mr-3">Get In Touch</span>
-          <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 group-hover:bg-brandBlue flex items-center justify-center text-white transition-colors duration-300">
-            <svg class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-            </svg>
-          </div>
-        </a>
+      <!-- Menu Links (Centered on Desktop & Mobile) -->
+      <div class="flex items-center justify-center space-x-6 sm:space-x-8 text-xs sm:text-sm font-semibold text-slate-600 md:absolute md:left-1/2 md:-translate-x-1/2 bg-white/70 md:bg-transparent backdrop-blur-md md:backdrop-blur-none px-5 py-2 md:px-0 md:py-0 rounded-full md:rounded-none border border-slate-200/50 md:border-none shadow-sm md:shadow-none">
+        <a href="#about" class="hover:text-brandBlue transition-colors duration-200">About</a>
+        <a href="#skills" class="hover:text-brandBlue transition-colors duration-200">Skills</a>
+        <a href="#projects" class="hover:text-brandBlue transition-colors duration-200">Projects</a>
+        <a href="#contact" class="hover:text-brandBlue transition-colors duration-200">Contact</a>
       </div>
 
     </nav>
@@ -146,23 +137,28 @@
             
             <!-- Portrait Image -->
             <img 
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
-              alt="Agil Aulia Rachman Muldan - Front-End Developer" 
-              class="w-full h-full object-cover object-top filter contrast-[1.03]"
+              src="./profile.jpg" 
+              alt="Agil Aulia Rachman Muldan" 
+              class="w-full h-full object-cover object-center filter contrast-[1.02]"
             />
 
-            <!-- Bottom Fog / Gradient Blend to Match Background -->
+
             <div class="absolute bottom-0 inset-x-0 h-28 sm:h-36 bg-gradient-to-t from-heroBg via-heroBg/70 to-transparent pointer-events-none"></div>
           </div>
 
-          <!-- Floating Badge Left (Tilted Pill with Float Animation) -->
+        
           <div class="absolute left-[-15px] sm:left-[-35px] lg:left-[-50px] top-[38%] bg-white/90 backdrop-blur-md border border-white/80 shadow-lg px-4 py-2 rounded-full text-xs sm:text-sm font-semibold text-slate-800 z-20 animate-float-left">
-            <span>Front-End</span>
+            <span>Web Developer</span>
           </div>
 
-          <!-- Floating Badge Right (Tilted Pill with Float Animation) -->
-          <div class="absolute right-[-15px] sm:right-[-35px] lg:right-[-50px] top-[24%] bg-white/90 backdrop-blur-md border border-white/80 shadow-lg px-4 py-2 rounded-full text-xs sm:text-sm font-semibold text-slate-800 z-20 animate-float-right">
-            <span>Next.js & React</span>
+  
+          <div class="absolute right-[-15px] sm:right-[-35px] lg:right-[-50px] top-[45%] bg-white/90 backdrop-blur-md border border-white/80 shadow-lg px-4 py-2 rounded-full text-xs sm:text-sm font-semibold text-slate-800 z-20 animate-float-right">
+            <span>Mobile App Developer</span>
+          </div>
+
+
+          <div class="absolute left-[-15px] sm:left-[-35px] lg:left-[-50px] top-[70%] bg-white/90 backdrop-blur-md border border-white/80 shadow-lg px-4 py-2 rounded-full text-xs sm:text-sm font-semibold text-slate-800 z-20 animate-float-right">
+            <span>Network Engineer</span>
           </div>
 
           <!-- Floating Stats Glass Card (Bottom Right) -->
@@ -186,11 +182,11 @@
           Hey, I'm Agil Aulia Rachman Muldan
         </p>
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-4">
-          Front-End Web & <br />
-          <span class="text-brandBlue">Digital Product</span> Developer.
+          Software Engineer & <br />
+          <span class="text-brandBlue">Information Technology</span>
         </h1>
         <p class="text-sm sm:text-base text-slate-600 max-w-xl leading-relaxed">
-          Mahasiswa Information Technology di Asia e University yang berfokus pada perancangan antarmuka web modern, responsif, dan berkinerja tinggi dengan Next.js, React, serta integrasi sistem Back-End.
+          on designing modern, responsive, and high-performance web interfaces with Next.js, React, and Back-End system integration.
         </p>
       </div>
 
@@ -225,15 +221,15 @@
             </div>
             
             <h3 class="text-2xl font-bold text-slate-900 mb-4 tracking-tight">
-              Front-End Developer & IT Student
+              I'm Information Technology Student
             </h3>
 
             <p class="text-slate-600 leading-relaxed text-sm sm:text-base mb-4">
-              Saya adalah Mahasiswa Information Technology di Asia e University yang berfokus kuat pada Front-End Web Development. Saya menerjemahkan desain menjadi antarmuka interaktif dan responsif, serta memiliki pemahaman dasar Back-End untuk integrasi sistem.
+              Hello! I am Agil Aulia Rachman Muldan. I am an Information Technology student at Asia e University as well as a Web Developer who is enthusiastic about building useful web applications.
             </p>
 
             <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
-              Berkomitmen menerapkan best practices modern web, clean code architecture, serta pengoptimalan performa dan aksesibilitas untuk menghasilkan pengalaman digital yang optimal.
+              I am really interested in and focused on front-end development, and I also have an understanding of back-end to support the completeness of a system. My focus is turning ideas into responsive and easy-to-use digital solutions.
             </p>
           </div>
 
@@ -244,11 +240,7 @@
             </span>
             <span class="flex items-center gap-1.5">
               <span class="w-2 h-2 rounded-full bg-brandBlue"></span>
-              Information Technology
-            </span>
-            <span class="flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-              Available for Internship
+              CCIT-FT UI
             </span>
           </div>
         </div>
@@ -260,7 +252,7 @@
           <div class="bg-blue-50 rounded-[2rem] p-6 border border-blue-100 shadow-sm flex flex-col justify-center hover:-translate-y-1 transition-all duration-500">
             <span class="text-xs font-semibold uppercase tracking-wider text-brandBlue mb-1">Core Capability</span>
             <h3 class="text-2xl sm:text-3xl font-extrabold text-blue-950">10+ Tech Stack</h3>
-            <p class="text-xs text-blue-700/80 mt-1">Fondasi teknologi modern untuk web application.</p>
+            <p class="text-xs text-blue-700/80 mt-1">The modern technology foundation for web applications.</p>
           </div>
 
           <!-- Card Bawah (Daftar Skill Pill / Badge) -->
@@ -325,7 +317,7 @@
               </h3>
 
               <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                Platform booking kelas olahraga dan pelacakan nutrisi. Memudahkan pengguna untuk memesan jadwal pelatihan serta memonitor asupan kalori dan target kesehatan harian secara efisien.
+                A platform for booking sports classes and tracking nutrition. Makes it easy for users to schedule training sessions and monitor calorie intake and daily health goals efficiently.
               </p>
             </div>
 
@@ -366,7 +358,7 @@
               </h3>
 
               <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                Aplikasi pelacakan kendaraan dengan fitur auto-scanning to-do list. Membantu pengelolaan inspeksi armada logistik secara otomatis serta pencatatan rute dan status kendaraan secara berkala.
+                A vehicle tracking app with an auto-scanning to-do list feature. It helps manage logistics fleet inspections automatically and records vehicle routes and status regularly.
               </p>
             </div>
 
@@ -384,87 +376,193 @@
       </div>
     </section>
 
-    <!-- ==================== 5. CONTACT SECTION ==================== -->
-    <section id="contact" class="scroll-mt-24 max-w-4xl mx-auto py-8">
+    <!-- ==================== 5. CONTACT & SOCIAL MEDIA SECTION ==================== -->
+    <section id="contact" class="scroll-mt-24 max-w-5xl mx-auto py-8">
       
       <!-- Section Title -->
-      <div class="text-center mb-8">
-        <div class="inline-block text-xs font-bold uppercase tracking-wider text-brandBlue bg-blue-50 px-3.5 py-1 rounded-full mb-2">
-          Contact
+      <div class="text-center mb-12">
+        <div class="inline-block text-xs font-bold uppercase tracking-wider text-brandBlue bg-blue-50 px-3.5 py-1 rounded-full mb-3">
+          Contact & Socials
         </div>
-        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
-          Get in Touch
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Let's Connect & Collaborate
         </h2>
-        <p class="text-slate-600 text-sm mt-2">
-          Kirimkan pesan Anda untuk kolaborasi, peluang proyek, atau kesempatan internship.
+        <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-lg mx-auto">
+          Open to project opportunities, collaborations, freelance work, or internship offers. Get in touch with me through social media and the contact channels below:
         </p>
       </div>
 
-      <!-- Form Card -->
-      <form onsubmit="handleContactSubmit(event)" class="bg-white rounded-[2rem] p-8 sm:p-12 shadow-sm border border-slate-100 space-y-6">
+      <!-- Social Media Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
         
-        <!-- Baris 1: Full Name & Email -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- 1. LinkedIn Card -->
+        <div class="group bg-white rounded-[2rem] p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between">
           <div>
-            <label for="fullname" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
-              Full Name
-            </label>
-            <input 
-              type="text" 
-              id="fullname" 
-              name="fullname" 
-              required
-              placeholder="John Doe"
-              class="w-full bg-gray-50 rounded-xl px-4 py-3.5 text-sm text-slate-800 border border-slate-200/60 focus:ring-2 focus:ring-brandBlue focus:outline-none transition-all duration-300 placeholder-slate-400"
-            />
+            <div class="flex items-start justify-between mb-5">
+              <div class="w-14 h-14 rounded-2xl bg-blue-50 text-[#0A66C2] flex items-center justify-center group-hover:scale-110 group-hover:bg-[#0A66C2] group-hover:text-white transition-all duration-300 shadow-sm">
+                <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </div>
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-[#0A66C2]">
+                Professional
+              </span>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-900 group-hover:text-[#0A66C2] transition-colors duration-300">
+              LinkedIn
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+             Connect professionally, check out my work experience, education history, and latest career updates.
+            </p>
           </div>
 
+          <a 
+            href="https://www.linkedin.com/in/agil-aulia-rachman/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="flex items-center justify-between w-full px-5 py-3.5 rounded-xl bg-slate-50 group-hover:bg-[#0A66C2] text-slate-700 group-hover:text-white font-semibold text-sm transition-all duration-300"
+          >
+            <span>Connect on LinkedIn</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- 2. GitHub Card -->
+        <div class="group bg-white rounded-[2rem] p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between">
           <div>
-            <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
+            <div class="flex items-start justify-between mb-5">
+              <div class="w-14 h-14 rounded-2xl bg-slate-100 text-slate-900 flex items-center justify-center group-hover:scale-110 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300 shadow-sm">
+                <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </div>
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-800">
+                Repositories
+              </span>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-900 group-hover:text-brandBlue transition-colors duration-300">
+              GitHub
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Check out the collection of source code, front-end development experiments, and various project repositories that I've worked on.
+            </p>
+          </div>
+
+          <a 
+            href="https://github.com/agilaulia" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="flex items-center justify-between w-full px-5 py-3.5 rounded-xl bg-slate-50 group-hover:bg-slate-900 text-slate-700 group-hover:text-white font-semibold text-sm transition-all duration-300"
+          >
+            <span>View GitHub Profile</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- 3. Instagram Card -->
+        <div class="group bg-white rounded-[2rem] p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between mb-5">
+              <div class="w-14 h-14 rounded-2xl bg-rose-50 text-[#E4405F] flex items-center justify-center group-hover:scale-110 group-hover:bg-gradient-to-tr group-hover:from-[#F58529] group-hover:via-[#DD2A7B] group-hover:to-[#8134AF] group-hover:text-white transition-all duration-300 shadow-sm">
+                <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </div>
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-rose-50 text-[#E4405F]">
+                Social Media
+              </span>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-900 group-hover:text-[#E4405F] transition-colors duration-300">
+              Instagram
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Follow personal updates, daily activity documentation, and the learning and exploration process in the field of technology.
+            </p>
+          </div>
+
+          <a 
+            href="https://www.instagram.com/agilrachmn/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="flex items-center justify-between w-full px-5 py-3.5 rounded-xl bg-slate-50 group-hover:bg-[#E4405F] text-slate-700 group-hover:text-white font-semibold text-sm transition-all duration-300"
+          >
+            <span>Follow on Instagram</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- 4. Email Direct Contact Card -->
+        <div class="group bg-white rounded-[2rem] p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between mb-5">
+              <div class="w-14 h-14 rounded-2xl bg-blue-50 text-brandBlue flex items-center justify-center group-hover:scale-110 group-hover:bg-brandBlue group-hover:text-white transition-all duration-300 shadow-sm">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-brandBlue">
+                Direct Mail
+              </span>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-900 group-hover:text-brandBlue transition-colors duration-300">
               Email
-            </label>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              required
-              placeholder="john@example.com"
-              class="w-full bg-gray-50 rounded-xl px-4 py-3.5 text-sm text-slate-800 border border-slate-200/60 focus:ring-2 focus:ring-brandBlue focus:outline-none transition-all duration-300 placeholder-slate-400"
-            />
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+             Send a direct message via email for project offers, formal collaboration proposals, or job opportunities.
+            </p>
+          </div>
+
+          <a 
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=agilauliarahmanm@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-between w-full px-5 py-3.5 rounded-xl bg-slate-50 group-hover:bg-brandBlue text-slate-700 group-hover:text-white font-semibold text-sm transition-all duration-300"
+          >
+            <span>Send Email Message</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Quick WhatsApp Action Banner -->
+      <div class="mt-8 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 rounded-[2rem] p-8 sm:p-10 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+        <div class="flex items-center gap-5 text-left">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center shrink-0">
+            <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold tracking-tight text-white">Want to Chat Faster?</h3>
+            <p class="text-slate-300 text-xs sm:text-sm mt-1">Tavailable for casual chat via WhatsApp about project ideas or collaboration.</p>
           </div>
         </div>
-
-        <!-- Baris 2: Message -->
-        <div>
-          <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
-            Message
-          </label>
-          <textarea 
-            id="message" 
-            name="message" 
-            rows="5" 
-            required
-            placeholder="Tuliskan pesan Anda di sini..."
-            class="w-full bg-gray-50 rounded-xl px-4 py-3.5 text-sm text-slate-800 border border-slate-200/60 focus:ring-2 focus:ring-brandBlue focus:outline-none transition-all duration-300 placeholder-slate-400 resize-none"
-          ></textarea>
-        </div>
-
-        <!-- Tombol Submit -->
-        <button 
-          type="submit" 
-          id="submit-btn"
-          class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition-colors duration-300 flex items-center justify-center gap-2 text-sm shadow-sm"
+        <a 
+          href="https://wa.me/6285384644468" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="shrink-0 inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all duration-300 hover:scale-105 shadow-lg shadow-emerald-500/25"
         >
-          <span>Send Message</span>
-          <span>&rarr;</span>
-        </button>
+          <span>Chat via WhatsApp</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
 
-        <!-- Feedback Alert -->
-        <div id="form-alert" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-medium text-center">
-          Pesan berhasil dikirim! Terima kasih telah menghubungi saya.
-        </div>
-
-      </form>
     </section>
 
   </main>
@@ -472,34 +570,9 @@
   <!-- ==================== FOOTER ==================== -->
   <footer class="border-t border-slate-200/80 mt-16 py-8 text-center text-sm text-slate-500 bg-white">
     <div class="max-w-6xl mx-auto px-4">
-      <p>&copy; 2026 Agil Aulia Rachman Muldan. All rights reserved.</p>
+      <p>&copy; 2026 Agil Aulia Rachman Muldan</p>
     </div>
   </footer>
-
-  <!-- Script for Interactive Form Feedback -->
-  <script>
-    function handleContactSubmit(e) {
-      e.preventDefault();
-      const btn = document.getElementById('submit-btn');
-      const alert = document.getElementById('form-alert');
-      
-      btn.disabled = true;
-      btn.innerHTML = '<span>Mengirim...</span>';
-      btn.classList.add('opacity-80');
-
-      setTimeout(() => {
-        btn.disabled = false;
-        btn.innerHTML = '<span>Send Message</span><span>&rarr;</span>';
-        btn.classList.remove('opacity-80');
-        alert.classList.remove('hidden');
-        e.target.reset();
-
-        setTimeout(() => {
-          alert.classList.add('hidden');
-        }, 5000);
-      }, 600);
-    }
-  </script>
 
 </body>
 </html>
