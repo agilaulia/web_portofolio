@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agil Aulia Rachman Muldan | Front-End Web Developer</title>
+  <meta name="description" content="Portfolio Agil Aulia Rachman Muldan - Front-End Web Developer & Mahasiswa Information Technology di Asia e University." />
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            heroBg: '#e6ebf2',
+            brandBlue: '#3866f2',
+          },
+          borderRadius: {
+            '[2rem]': '2rem',
+            '[2.5rem]': '2.5rem',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles & Keyframe Animations -->
+  <style>
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatSlow {
+      0%, 100% {
+        transform: translateY(0px) rotate(-12deg);
+      }
+      50% {
+        transform: translateY(-8px) rotate(-10deg);
+      }
+    }
+
+    @keyframes floatRight {
+      0%, 100% {
+        transform: translateY(0px) rotate(12deg);
+      }
+      50% {
+        transform: translateY(-6px) rotate(14deg);
+      }
+    }
+
+    .animate-fadeInUp {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .animate-float-left {
+      animation: floatSlow 4s ease-in-out infinite;
+    }
+
+    .animate-float-right {
+      animation: floatRight 5s ease-in-out infinite;
+    }
+
+    /* Giant outline text effect */
+    .hero-big-text {
+      font-size: clamp(4.5rem, 15vw, 13rem);
+      line-height: 0.9;
+      color: rgba(255, 255, 255, 0.65);
+      letter-spacing: -0.04em;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900 font-sans antialiased selection:bg-brandBlue selection:text-white">
+
+  <!-- ==================== TOP HERO CONTAINER (MATCHING REFERENCE DESIGN) ==================== -->
+  <div class="bg-heroBg relative overflow-hidden pb-16 lg:pb-24 pt-4 border-b border-slate-200/60">
+
+    <!-- ==================== 1. NAVBAR ==================== -->
+    <nav class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-3 flex items-center justify-between relative z-30">
+      
+      <!-- Brand / Logo -->
+      <a href="#hero" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-xl bg-brandBlue text-white flex items-center justify-center font-bold text-base shadow-sm shadow-brandBlue/30 group-hover:scale-105 transition-transform duration-300">
+          A
+        </div>
+        <span class="font-bold text-xl text-slate-900 tracking-tight">
+          Agil<span class="text-brandBlue">.</span>
+        </span>
+      </a>
+
+      <!-- Menu Links (Desktop) -->
+      <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-slate-900 transition-colors duration-200">About</a>
+        <a href="#skills" class="hover:text-slate-900 transition-colors duration-200">Skills</a>
+        <a href="#projects" class="hover:text-slate-900 transition-colors duration-200">Projects</a>
+        <a href="#contact" class="hover:text-slate-900 transition-colors duration-200">Contact</a>
+      </div>
+
+      <!-- CTA Button (Pill with Arrow Circle) -->
+      <div class="flex items-center">
+        <a href="#contact" class="group flex items-center bg-slate-900 hover:bg-slate-800 text-white pl-5 pr-1.5 py-1.5 rounded-full transition-all duration-300 shadow-sm hover:scale-105">
+          <span class="text-xs sm:text-sm font-medium mr-3">Get In Touch</span>
+          <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 group-hover:bg-brandBlue flex items-center justify-center text-white transition-colors duration-300">
+            <svg class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+    </nav>
+
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <header id="hero" class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-6 sm:pt-10 relative z-10">
+      
+      <!-- Center Visual Area with Giant Background Text & Arch Portrait -->
+      <div class="relative flex flex-col items-center justify-center min-h-[440px] sm:min-h-[520px] lg:min-h-[580px]">
+        
+        <!-- Giant Background Typography -->
+        <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 text-center pointer-events-none select-none z-0">
+          <span class="hero-big-text font-black uppercase block tracking-tighter">
+            DEVELOPER
+          </span>
+        </div>
+
+        <!-- Center Blue Arch & Portrait Container -->
+        <div class="relative z-10 flex flex-col items-center">
+          
+          <!-- Blue Arch Dome -->
+          <div class="w-[260px] h-[330px] sm:w-[340px] sm:h-[430px] lg:w-[390px] lg:h-[490px] rounded-t-[130px] sm:rounded-t-[170px] lg:rounded-t-[195px] bg-gradient-to-b from-brandBlue to-blue-600 relative overflow-hidden shadow-2xl flex items-end justify-center">
+            
+            <!-- Portrait Image -->
+            <img 
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
+              alt="Agil Aulia Rachman Muldan - Front-End Developer" 
+              class="w-full h-full object-cover object-top filter contrast-[1.03]"
+            />
+
+            <!-- Bottom Fog / Gradient Blend to Match Background -->
+            <div class="absolute bottom-0 inset-x-0 h-28 sm:h-36 bg-gradient-to-t from-heroBg via-heroBg/70 to-transparent pointer-events-none"></div>
+          </div>
+
+          <!-- Floating Badge Left (Tilted Pill with Float Animation) -->
+          <div class="absolute left-[-15px] sm:left-[-35px] lg:left-[-50px] top-[38%] bg-white/90 backdrop-blur-md border border-white/80 shadow-lg px-4 py-2 rounded-full text-xs sm:text-sm font-semibold text-slate-800 z-20 animate-float-left">
+            <span>Front-End</span>
+          </div>
+
+          <!-- Floating Badge Right (Tilted Pill with Float Animation) -->
+          <div class="absolute right-[-15px] sm:right-[-35px] lg:right-[-50px] top-[24%] bg-white/90 backdrop-blur-md border border-white/80 shadow-lg px-4 py-2 rounded-full text-xs sm:text-sm font-semibold text-slate-800 z-20 animate-float-right">
+            <span>Next.js & React</span>
+          </div>
+
+          <!-- Floating Stats Glass Card (Bottom Right) -->
+          <div class="absolute -right-2 sm:-right-10 lg:-right-20 bottom-8 sm:bottom-12 bg-white/90 backdrop-blur-md border border-white/90 shadow-xl rounded-2xl p-4 sm:p-5 min-w-[200px] sm:min-w-[240px] z-20 flex items-center justify-between hover:-translate-y-1 transition-transform duration-300">
+            <div class="text-left">
+              <p class="text-xs font-bold text-slate-800">Information Technology</p>
+              <p class="text-[11px] text-slate-500 font-medium">Asia e University</p>
+            </div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 ml-4 font-mono">
+              IT
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Hero Bottom Headline (Left Aligned Modern Typography) -->
+      <div class="mt-4 sm:mt-6 max-w-2xl text-left relative z-20 animate-fadeInUp">
+        <p class="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">
+          Hey, I'm Agil Aulia Rachman Muldan
+        </p>
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-4">
+          Front-End Web & <br />
+          <span class="text-brandBlue">Digital Product</span> Developer.
+        </h1>
+        <p class="text-sm sm:text-base text-slate-600 max-w-xl leading-relaxed">
+          Mahasiswa Information Technology di Asia e University yang berfokus pada perancangan antarmuka web modern, responsif, dan berkinerja tinggi dengan Next.js, React, serta integrasi sistem Back-End.
+        </p>
+      </div>
+
+    </header>
+
+  </div>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
+
+    <!-- ==================== 3. ABOUT & SKILLS SECTION (BENTO GRID) ==================== -->
+    <section id="about" class="scroll-mt-24">
+      
+      <!-- Section Title -->
+      <div class="mb-10 text-left">
+        <div class="inline-block text-xs font-bold uppercase tracking-wider text-brandBlue bg-blue-50 px-3.5 py-1 rounded-full mb-3">
+          Profile & Tech Stack
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          About & Core Competencies
+        </h2>
+      </div>
+
+      <!-- Bento Grid Container -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Card Utama (About Me) - 2 Kolom di Desktop -->
+        <div class="md:col-span-2 bg-white rounded-[2rem] p-8 sm:p-10 shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-500 flex flex-col justify-between">
+          <div>
+            <div class="w-11 h-11 rounded-xl bg-blue-50 text-brandBlue flex items-center justify-center font-bold text-lg mb-6">
+              &lt;/&gt;
+            </div>
+            
+            <h3 class="text-2xl font-bold text-slate-900 mb-4 tracking-tight">
+              Front-End Developer & IT Student
+            </h3>
+
+            <p class="text-slate-600 leading-relaxed text-sm sm:text-base mb-4">
+              Saya adalah Mahasiswa Information Technology di Asia e University yang berfokus kuat pada Front-End Web Development. Saya menerjemahkan desain menjadi antarmuka interaktif dan responsif, serta memiliki pemahaman dasar Back-End untuk integrasi sistem.
+            </p>
+
+            <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+              Berkomitmen menerapkan best practices modern web, clean code architecture, serta pengoptimalan performa dan aksesibilitas untuk menghasilkan pengalaman digital yang optimal.
+            </p>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-100 flex flex-wrap gap-4 text-xs font-medium text-slate-500">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-brandBlue"></span>
+              Asia e University
+            </span>
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-brandBlue"></span>
+              Information Technology
+            </span>
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              Available for Internship
+            </span>
+          </div>
+        </div>
+
+        <!-- Card Samping (Skills) - Kolom ke-3, 2 Card Ditumpuk Vertikal -->
+        <div id="skills" class="flex flex-col gap-6">
+          
+          <!-- Card Atas (Tech Stack Metric) -->
+          <div class="bg-blue-50 rounded-[2rem] p-6 border border-blue-100 shadow-sm flex flex-col justify-center hover:-translate-y-1 transition-all duration-500">
+            <span class="text-xs font-semibold uppercase tracking-wider text-brandBlue mb-1">Core Capability</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-blue-950">10+ Tech Stack</h3>
+            <p class="text-xs text-blue-700/80 mt-1">Fondasi teknologi modern untuk web application.</p>
+          </div>
+
+          <!-- Card Bawah (Daftar Skill Pill / Badge) -->
+          <div class="bg-white rounded-[2rem] p-6 shadow-sm border border-slate-100 flex-1 flex flex-col justify-center hover:-translate-y-1 transition-all duration-500">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Technologies</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-slate-100 text-slate-700 rounded-full px-3 py-1 text-xs font-medium hover:bg-slate-200 transition-colors duration-300">HTML</span>
+              <span class="bg-slate-100 text-slate-700 rounded-full px-3 py-1 text-xs font-medium hover:bg-slate-200 transition-colors duration-300">CSS</span>
+              <span class="bg-slate-100 text-slate-700 rounded-full px-3 py-1 text-xs font-medium hover:bg-slate-200 transition-colors duration-300">Tailwind CSS</span>
+              <span class="bg-slate-100 text-slate-700 rounded-full px-3 py-1 text-xs font-medium hover:bg-slate-200 transition-colors duration-300">JavaScript</span>
+              <span class="bg-slate-100 text-slate-700 rounded-full px-3 py-1 text-xs font-medium hover:bg-slate-200 transition-colors duration-300">TypeScript</span>
+              <span class="bg-slate-100 text-slate-700 rounded-full px-3 py-1 text-xs font-medium hover:bg-slate-200 transition-colors duration-300">Next.js</span>
+              <span class="bg-slate-100 text-slate-700 rounded-full px-3 py-1 text-xs font-medium hover:bg-slate-200 transition-colors duration-300">PHP</span>
+              <span class="bg-slate-100 text-slate-700 rounded-full px-3 py-1 text-xs font-medium hover:bg-slate-200 transition-colors duration-300">Laravel</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 4. PROJECTS SECTION (HORIZONTAL CARDS) ==================== -->
+    <section id="projects" class="scroll-mt-24">
+      
+      <!-- Section Title -->
+      <div class="mb-10 text-left">
+        <div class="inline-block text-xs font-bold uppercase tracking-wider text-brandBlue bg-blue-50 px-3.5 py-1 rounded-full mb-3">
+          Portfolio
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Selected Projects
+        </h2>
+      </div>
+
+      <!-- Container Vertikal Card Proyek -->
+      <div class="space-y-8">
+
+        <!-- Proyek 1: FitBook Platform -->
+        <article class="group bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm hover:-translate-y-1 hover:shadow-xl transition-all duration-500 flex flex-col md:flex-row">
+          
+          <!-- Gambar Proyek -->
+          <div class="md:w-1/2 overflow-hidden bg-slate-100 relative min-h-[250px] md:min-h-full">
+            <img 
+              src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" 
+              alt="FitBook Platform" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            />
+          </div>
+
+          <!-- Deskripsi Konten Proyek -->
+          <div class="md:w-1/2 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="bg-blue-50 text-brandBlue rounded-full px-2.5 py-0.5 text-xs font-semibold">Next.js</span>
+                <span class="bg-slate-100 text-slate-700 rounded-full px-2.5 py-0.5 text-xs font-semibold">Tailwind CSS</span>
+                <span class="bg-slate-100 text-slate-700 rounded-full px-2.5 py-0.5 text-xs font-semibold">TypeScript</span>
+              </div>
+
+              <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-brandBlue transition-colors duration-300">
+                FitBook Platform
+              </h3>
+
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                Platform booking kelas olahraga dan pelacakan nutrisi. Memudahkan pengguna untuk memesan jadwal pelatihan serta memonitor asupan kalori dan target kesehatan harian secara efisien.
+              </p>
+            </div>
+
+            <!-- Tombol Proyek -->
+            <div>
+              <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm transition-colors duration-300">
+                <span>Explore Project</span>
+                <span class="group-hover:translate-x-1 transition-transform duration-300 inline-block">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+
+        <!-- Proyek 2: Vehicle Tracking App (Alternating Layout) -->
+        <article class="group bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm hover:-translate-y-1 hover:shadow-xl transition-all duration-500 flex flex-col md:flex-row-reverse">
+          
+          <!-- Gambar Proyek -->
+          <div class="md:w-1/2 overflow-hidden bg-slate-100 relative min-h-[250px] md:min-h-full">
+            <img 
+              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80" 
+              alt="Vehicle Tracking App" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            />
+          </div>
+
+          <!-- Deskripsi Konten Proyek -->
+          <div class="md:w-1/2 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="bg-blue-50 text-brandBlue rounded-full px-2.5 py-0.5 text-xs font-semibold">React</span>
+                <span class="bg-slate-100 text-slate-700 rounded-full px-2.5 py-0.5 text-xs font-semibold">Tailwind CSS</span>
+                <span class="bg-slate-100 text-slate-700 rounded-full px-2.5 py-0.5 text-xs font-semibold">Scanner API</span>
+              </div>
+
+              <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-brandBlue transition-colors duration-300">
+                Vehicle Tracking App
+              </h3>
+
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                Aplikasi pelacakan kendaraan dengan fitur auto-scanning to-do list. Membantu pengelolaan inspeksi armada logistik secara otomatis serta pencatatan rute dan status kendaraan secara berkala.
+              </p>
+            </div>
+
+            <!-- Tombol Proyek -->
+            <div>
+              <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm transition-colors duration-300">
+                <span>Explore Project</span>
+                <span class="group-hover:translate-x-1 transition-transform duration-300 inline-block">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==================== 5. CONTACT SECTION ==================== -->
+    <section id="contact" class="scroll-mt-24 max-w-4xl mx-auto py-8">
+      
+      <!-- Section Title -->
+      <div class="text-center mb-8">
+        <div class="inline-block text-xs font-bold uppercase tracking-wider text-brandBlue bg-blue-50 px-3.5 py-1 rounded-full mb-2">
+          Contact
+        </div>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
+          Get in Touch
+        </h2>
+        <p class="text-slate-600 text-sm mt-2">
+          Kirimkan pesan Anda untuk kolaborasi, peluang proyek, atau kesempatan internship.
+        </p>
+      </div>
+
+      <!-- Form Card -->
+      <form onsubmit="handleContactSubmit(event)" class="bg-white rounded-[2rem] p-8 sm:p-12 shadow-sm border border-slate-100 space-y-6">
+        
+        <!-- Baris 1: Full Name & Email -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label for="fullname" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
+              Full Name
+            </label>
+            <input 
+              type="text" 
+              id="fullname" 
+              name="fullname" 
+              required
+              placeholder="John Doe"
+              class="w-full bg-gray-50 rounded-xl px-4 py-3.5 text-sm text-slate-800 border border-slate-200/60 focus:ring-2 focus:ring-brandBlue focus:outline-none transition-all duration-300 placeholder-slate-400"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
+              Email
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required
+              placeholder="john@example.com"
+              class="w-full bg-gray-50 rounded-xl px-4 py-3.5 text-sm text-slate-800 border border-slate-200/60 focus:ring-2 focus:ring-brandBlue focus:outline-none transition-all duration-300 placeholder-slate-400"
+            />
+          </div>
+        </div>
+
+        <!-- Baris 2: Message -->
+        <div>
+          <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
+            Message
+          </label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows="5" 
+            required
+            placeholder="Tuliskan pesan Anda di sini..."
+            class="w-full bg-gray-50 rounded-xl px-4 py-3.5 text-sm text-slate-800 border border-slate-200/60 focus:ring-2 focus:ring-brandBlue focus:outline-none transition-all duration-300 placeholder-slate-400 resize-none"
+          ></textarea>
+        </div>
+
+        <!-- Tombol Submit -->
+        <button 
+          type="submit" 
+          id="submit-btn"
+          class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition-colors duration-300 flex items-center justify-center gap-2 text-sm shadow-sm"
+        >
+          <span>Send Message</span>
+          <span>&rarr;</span>
+        </button>
+
+        <!-- Feedback Alert -->
+        <div id="form-alert" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-medium text-center">
+          Pesan berhasil dikirim! Terima kasih telah menghubungi saya.
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-slate-200/80 mt-16 py-8 text-center text-sm text-slate-500 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <p>&copy; 2026 Agil Aulia Rachman Muldan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script for Interactive Form Feedback -->
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      const alert = document.getElementById('form-alert');
+      
+      btn.disabled = true;
+      btn.innerHTML = '<span>Mengirim...</span>';
+      btn.classList.add('opacity-80');
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<span>Send Message</span><span>&rarr;</span>';
+        btn.classList.remove('opacity-80');
+        alert.classList.remove('hidden');
+        e.target.reset();
+
+        setTimeout(() => {
+          alert.classList.add('hidden');
+        }, 5000);
+      }, 600);
+    }
+  </script>
+
+</body>
+</html>
